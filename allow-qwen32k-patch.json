@@ -1,0 +1,13 @@
+﻿{
+  "agents": {
+    "defaults": {
+      "modelPolicy": {
+        "allow": [
+          "ollama/qwen2.5-coder:7b",
+          "ollama/qwen3:8b",
+          "ollama/qwen3:8b-32k"
+        ]
+      }
+    }
+  }
+}

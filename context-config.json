@@ -1,0 +1,22 @@
+﻿[
+  {
+    "path": "models.providers.ollama.models",
+    "value": [
+      {
+        "id": "qwen3:8b-32k",
+        "name": "Qwen3 8B 32K",
+        "reasoning": false,
+        "input": ["text"],
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "maxTokens": 8192,
+        "contextWindow": 32768,
+        "api": "ollama"
+      }
+    ]
+  }
+]

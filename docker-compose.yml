@@ -1,0 +1,39 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: personal-ai-ollama
+    restart: unless-stopped
+    ports:
+      - "11435:11434"
+    volumes:
+      - personal-ai-models:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  openclaw:
+    image: openclaw:local
+    container_name: personal-ai-openclaw
+    restart: unless-stopped
+    environment:
+      OPENCLAW_GATEWAY_TOKEN: "${OPENCLAW_GATEWAY_TOKEN}"
+    depends_on:
+      - ollama
+    volumes:
+      - personal-ai-openclaw:/home/node/.openclaw
+      - personal-ai-workspace:/home/node/.openclaw/workspace
+    command: ["node", "dist/index.js", "gateway", "--bind", "lan", "--port", "18789"]
+
+volumes:
+  personal-ai-models:
+    name: personal-ai-models
+
+  personal-ai-openclaw:
+    name: personal-ai-openclaw
+
+  personal-ai-workspace:
+    name: personal-ai-workspace

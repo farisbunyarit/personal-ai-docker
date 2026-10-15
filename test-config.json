@@ -1,0 +1,21 @@
+﻿[
+  {
+    "path": "models.providers",
+    "value": {
+      "ollama": {
+        "api": "ollama",
+        "baseUrl": "http://ollama:11434",
+        "models": [
+          {
+            "id": "qwen3:8b",
+            "name": "Qwen3 8B"
+          },
+          {
+            "id": "qwen2.5-coder:7b",
+            "name": "Qwen2.5 Coder 7B"
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,29 @@
+﻿# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# OpenClaw credentials and runtime state
+openclaw-data/
+openclaw-workspace/
+openclaw.json
+openclaw.json.backup
+openclaw.json.backup-*
+
+# Local backups
+*.backup
+*.bak
+
+# Local logs and temporary files
+*.log
+*.tmp
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+docker-compose.yml.backup-before-vscode
+
+openclaw-schema.txt
+schema.json
