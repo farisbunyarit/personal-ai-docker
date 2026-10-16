@@ -184,10 +184,10 @@ The current environment contains:
 
 ### 4. Check the Ollama API
 
-Run this command from Windows:
+Run this command from the OpenClaw container:
 
 ```powershell
-Invoke-RestMethod http://127.0.0.1:11435/api/tags
+docker exec personal-ai-openclaw node -e "fetch('http://ollama:11434/api/tags').then(r => r.json()).then(console.log)"
 ```
 
 A successful response should include information about the available models.
@@ -227,7 +227,7 @@ A generated response indicates that the model can perform inference.
 ### Test the Ollama API
 
 ```powershell
-Invoke-RestMethod http://127.0.0.1:11435/api/tags
+docker exec personal-ai-openclaw node -e "fetch('http://ollama:11434/api/tags').then(r => r.json()).then(console.log)"
 ```
 
 Confirm that the response contains the expected models.
