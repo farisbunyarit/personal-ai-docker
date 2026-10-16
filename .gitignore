@@ -27,3 +27,5 @@ docker-compose.yml.backup-before-vscode
 
 openclaw-schema.txt
 schema.json
+
+openclaw-image.tar
