@@ -60,6 +60,13 @@ Optional Windows Development Tools
 
 The current Compose configuration does not publish the OpenClaw gateway port to the Windows host.
 
+## Installation
+
+For step-by-step setup instructions, see the [Installation Guide](INSTALLATION.md).
+
+The guide covers Docker setup, downloading Ollama models, starting OpenClaw, and verifying the environment.
+
+
 ## Requirements
 
 ### Required for the Current Setup
